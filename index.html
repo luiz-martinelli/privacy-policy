@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Política de Privacidade</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0F0F14;
+      --surface: #1A1A24;
+      --accent: #C8A96E;
+      --accent2: #9B72CF;
+      --text: #F0EDE8;
+      --muted: #9E9AA8;
+      --border: #2A2A38;
+      --tag-bg: #22203A;
+      --tag-text: #C8A96E;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 40px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      background: var(--accent2);
+      opacity: 0.07;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: 5%;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.06;
+    }
+
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    header .label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(30px, 5vw, 46px);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    header .app-name {
+      font-size: 15px;
+      color: var(--accent2);
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+
+    header .meta {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 52px 40px 80px;
+    }
+
+    .intro-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 48px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .intro-card p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    section { margin-bottom: 40px; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .section-num {
+      width: 30px; height: 30px;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px;
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    p, li {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    ul { padding-left: 20px; margin-top: 10px; }
+    ul li { margin-bottom: 6px; }
+
+    strong { color: var(--text); font-weight: 500; }
+
+    .highlight-box {
+      background: var(--tag-bg);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-top: 14px;
+    }
+
+    .highlight-box p { color: var(--accent); font-size: 14px; }
+    .highlight-box.purple p { color: #B89AE0; }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 40px 48px;
+      font-size: 12px;
+      color: #555568;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 40px 24px 36px; }
+      main { padding: 36px 24px 60px; }
+      .intro-card { padding: 22px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="label">Documento Legal</div>
+    <h1>Política de Privacidade</h1>
+    <div class="app-name">Agenda de Bandas</div>
+    <div class="meta">Última atualização: <span id="update-date"></span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="intro-card">
+    <p>
+      Esta Política de Privacidade explica como o aplicativo <strong>Agenda de Bandas</strong>
+      coleta e utiliza suas informações. Nosso app tem como único objetivo organizar e exibir
+      informações de agenda para bandas cadastradas. Valorizamos sua privacidade e coletamos
+      apenas o mínimo necessário para que o serviço funcione.
+    </p>
+  </div>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <h2>Informações que coletamos</h2>
+    </div>
+    <p>Coletamos <strong>somente</strong> as seguintes informações:</p>
+    <ul>
+      <li><strong>E-mail:</strong> utilizado como identificador único da sua conta.</li>
+      <li><strong>Senha:</strong> armazenada de forma criptografada. Não temos acesso à sua senha em texto simples.</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Não coletamos localização, câmera, contatos, histórico de navegação, dados financeiros ou qualquer outra informação além das listadas acima.</p>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <h2>Como usamos suas informações</h2>
+    </div>
+    <p>Seu e-mail e senha são utilizados exclusivamente para:</p>
+    <ul>
+      <li>Autenticar o acesso à sua conta no aplicativo;</li>
+      <li>Identificar qual banda ou usuário está logado;</li>
+      <li>Permitir a recuperação de acesso em caso de senha esquecida.</li>
+    </ul>
+    <div class="highlight-box purple">
+      <p>Não usamos seu e-mail para envio de publicidade, marketing ou comunicações não relacionadas ao funcionamento do app.</p>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <h2>Compartilhamento de dados</h2>
+    </div>
+    <p>
+      Suas informações <strong>não são vendidas, alugadas ou compartilhadas</strong> com terceiros
+      para qualquer finalidade comercial.
+    </p>
+    <p style="margin-top:12px">Os dados poderão ser acessados apenas nos casos abaixo:</p>
+    <ul>
+      <li><strong>Infraestrutura técnica:</strong> servidores e serviços de hospedagem utilizados para manter o app funcionando, sempre sob obrigação de confidencialidade.</li>
+      <li><strong>Obrigação legal:</strong> quando exigido por lei ou ordem judicial.</li>
+    </ul>
+  </section>
+
+  <hr class="divider"/>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <h2>Segurança dos dados</h2>
+    </div>
+    <p>
+      As senhas dos usuários são armazenadas utilizando criptografia (hashing), de forma que
+      nem os administradores do sistema têm acesso ao valor original. Adotamos boas práticas
+      de segurança para proteger suas informações contra acesso não autorizado.
+    </p>
+  </section>
+
+  <hr class="divider"/>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">05</div>
+      <h2>Seus direitos (LGPD)</h2>
+    </div>
+    <p>Conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você tem direito a:</p>
+    <ul>
+      <li>Acessar os dados que temos sobre você;</li>
+      <li>Corrigir informações incorretas;</li>
+      <li>Solicitar a exclusão da sua conta e de todos os seus dados;</li>
+      <li>Revogar seu consentimento a qualquer momento.</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Para exercer qualquer desses direitos, basta entrar em contato pelo e-mail informado ao final desta política.</p>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">06</div>
+      <h2>Retenção e exclusão de dados</h2>
+    </div>
+    <p>
+      Seus dados são mantidos enquanto sua conta estiver ativa. Ao solicitar a exclusão da conta,
+      todos os dados associados (e-mail e senha) serão permanentemente removidos dos nossos sistemas
+      em até <strong>30 dias</strong>.
+    </p>
+  </section>
+
+  <hr class="divider"/>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">07</div>
+      <h2>Alterações nesta política</h2>
+    </div>
+    <p>
+      Caso esta política seja alterada, notificaremos os usuários pelo próprio aplicativo.
+      A data de atualização no topo deste documento sempre indicará a versão mais recente.
+    </p>
+  </section>
+
+  <hr class="divider"/>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">08</div>
+      <h2>Contato</h2>
+    </div>
+    <p>Dúvidas ou solicitações relacionadas à sua privacidade:</p>
+    <div class="highlight-box" style="margin-top:16px">
+      <p>
+        <strong>E-mail:</strong> luizmartinelli26@gmail.com<br/>
+        <strong>Responsável:</strong> LHMA Apps
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Em conformidade com a LGPD (Lei nº 13.709/2018), Google Play Developer Policy e Apple App Store Review Guidelines.</p>
+</footer>
+
+<script>
+  const d = new Date();
+  const opts = { day: '2-digit', month: 'long', year: 'numeric' };
+  document.getElementById('update-date').textContent = d.toLocaleDateString('pt-BR', opts);
+</script>
+
+</body>
+</html>
